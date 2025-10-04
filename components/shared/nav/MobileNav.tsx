@@ -11,7 +11,7 @@ export default function MobileNav() {
   const paths = useNavigation();
 
   const { isActive } = useConversation();
-    if (isActive) return null;
+  if (isActive) return null;
 
 
   return (

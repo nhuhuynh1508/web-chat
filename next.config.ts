@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/",
-        destination: "/conversations",
+        destination: "https://grand-pug-52.clerk.accounts.dev",
         permanent: true,
       },
     ];

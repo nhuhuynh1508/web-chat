@@ -1,6 +1,6 @@
 // this hook detects if a conversation is active by checking the conversationID in the URL parameter
 "use client";
-import React, { useState, createContext, use } from "react";
+import React, { useState, createContext, use, useContext } from "react";
 
 type ConversationContextType = {
     isActive: boolean;
@@ -23,7 +23,7 @@ export const ConversationProvider = ({children}: {children: React.ReactNode}) =>
 }
 
 export const useConversation = () => {
-    const context = use(ConversationContext);
+    const context = useContext(ConversationContext);
     if (!context) {
         throw new Error("useConversation must be used within a ConversationProvider");
     }
