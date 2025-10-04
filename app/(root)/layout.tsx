@@ -1,9 +1,12 @@
-import React, { Children } from "react";
+import React from "react";
+import SidebarWrapper from "@/components/shared/sidebar/SidebarWrapper";
 
-type Props = React.PropsWithChildren<{ name: string }>;
+type Props = React.PropsWithChildren<{}>;
 
 export default function Layout({children}: Props){
   return (
-    <div>{children}</div>
+    <SidebarWrapper>
+      {children}
+    </SidebarWrapper>
   );
 }
