@@ -5,8 +5,8 @@ import React from "react";
 
 export default function ConversationFallback() {
   return (
-    <Card className="hidden lg:flex h-full w-full p-2 items-center justify-center">
-      <p>Select/start a conversation!</p>
+    <Card className="hidden lg:flex h-full w-full p-2 items-center justify-center bg-gray-600/10">
+      <p>Select/start a conversation to get started!</p>
     </Card>
   )
 }
