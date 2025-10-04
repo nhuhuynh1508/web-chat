@@ -5,9 +5,14 @@ import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
+import { useConversation } from "@/hooks/useConversation";
 
 export default function MobileNav() {
   const paths = useNavigation();
+
+  const { isActive } = useConversation();
+    if (isActive) return null;
+
 
   return (
     <TooltipProvider>
